@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Consult Tech • Crédito Inteligente</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./chat.css" />
+</head>
+<body class="min-h-dvh bg-black text-white flex items-center justify-center p-4">
+  <a href="/home/home.html" class="fixed left-6 top-6">
+    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-slate-800 border border-slate-700">←</span>
+  </a>
+  <main class="chat-card w-full max-w-3xl">
+    <header class="chat-header">
+      <h1 class="text-xl md:text-2xl font-semibold">Crédito Inteligente <span class="text-yellow-400">✨</span></h1>
+    </header>
+    <section id="chatBody" class="chat-body"></section>
+    <footer class="chat-footer">
+      <form id="chatForm" class="chat-form" autocomplete="off">
+        <input id="chatInput" class="chat-input" placeholder="Digite sua resposta..." />
+        <button class="chat-send" title="Enviar">✈️</button>
+      </form>
+    </footer>
+  </main>
+  <script type="module" src="/assets/js/utils.js"></script>
+  <script type="module" src="./chat.js"></script>
+</body>
+</html>

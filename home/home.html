@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Consult Tech • Início</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./home.css">
+</head>
+<body class="min-h-dvh bg-black text-white">
+  <div class="grid grid-cols-[260px_1fr] min-h-dvh">
+    <aside class="bg-slate-900/95 border-r border-slate-800 flex flex-col">
+      <div class="px-4 py-4 flex items-center gap-2 text-yellow-400">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l9 8h-3v9h-5v-6H11v6H6v-9H3l9-8z"/></svg>
+        <span class="text-lg font-semibold tracking-wide">Consult Tech</span>
+      </div>
+      <nav class="mt-2 px-3 space-y-1">
+        <a href="/home/home.html" class="navlink active"><span class="icon">🏠</span> Início</a>
+        <a href="/pix/pix.html" class="navlink"><span class="icon">✖️</span> Área Pix</a>
+        <a href="/credito/chat.html" class="navlink"><span class="icon">💳</span> Crédito Inteligente</a>
+      </nav>
+      <div class="mt-auto p-3">
+        <button id="logout" class="w-full text-left navlink !text-slate-300 hover:!text-white">↪️ Sair</button>
+      </div>
+    </aside>
+
+    <main class="p-6 md:p-8">
+      <header class="mb-6 flex items-start justify-between">
+        <div>
+          <h1 class="text-3xl md:text-4xl font-semibold">Bem-vindo, <span id="userName">...</span>!</h1>
+          <p id="userCompany" class="text-slate-400">—</p>
+        </div>
+        <a href="/perfil/perfil.html" class="perfil-btn" title="Perfil do Usuário">
+          <span class="text-2xl">👤</span>
+        </a>
+      </header>
+
+      <section class="grid lg:grid-cols-[1fr_360px] gap-6">
+        <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-5">
+          <div class="flex items-center justify-between">
+            <h2 class="text-slate-300 font-medium">Saldo em Conta</h2>
+            <button id="toggleSaldo" class="text-slate-400 hover:text-slate-200" title="Ocultar/mostrar">🙈</button>
+          </div>
+          <div class="text-4xl md:text-5xl font-semibold my-3" id="saldoValor">R$ 0,00</div>
+          <div class="h-px bg-slate-800 my-3"></div>
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-slate-300 font-medium">Próxima Parcela</p>
+              <p class="text-yellow-400 text-xl font-semibold" id="parcelaValor">R$ 0,00</p>
+              <p class="text-slate-400 text-sm">Vencimento: <span id="parcelaData">--/--/----</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-5">
+          <h2 class="text-slate-300 font-medium mb-4">Ações Rápidas</h2>
+          <div class="grid grid-cols-2 gap-3">
+            <a class="quickbtn" href="/pix/pix.html">✖️ <span>PIX</span></a>
+            <a class="quickbtn" href="/credito/chat.html">$ <span>Crédito</span></a>
+            <button class="quickbtn">▦ <span>Pagar</span></button>
+            <button class="quickbtn">🧾 <span>Cobranças</span></button>
+          </div>
+        </div>
+      </section>
+      
+      <section class="mt-6 bg-slate-900/80 border border-slate-800 rounded-2xl p-5">
+        <div class="flex items-center gap-2 mb-4">
+          <h2 class="text-slate-300 font-medium">Meus Investimentos</h2>
+          <span class="text-green-400">💰</span>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-5">
+          <div class="bg-slate-800/60 rounded-xl p-4 border border-slate-700">
+            <p class="text-sm text-slate-400 mb-2">Performance Total (Últimos 12 meses)</p>
+            <div class="flex items-end h-24 gap-1">
+              <div class="flex-1 bg-green-500/80 h-[20%] rounded-t-sm" title="Jan: +2.1%"></div>
+              <div class="flex-1 bg-green-500/80 h-[40%] rounded-t-sm" title="Fev: +4.2%"></div>
+              <div class="flex-1 bg-green-500/80 h-[30%] rounded-t-sm" title="Mar: +3.1%"></div>
+              <div class="flex-1 bg-yellow-500/80 h-[60%] rounded-t-sm" title="Abr: +6.5%"></div>
+              <div class="flex-1 bg-rose-500/80 h-[10%] rounded-t-sm" title="Mai: -1.0%"></div>
+              <div class="flex-1 bg-green-500/80 h-[75%] rounded-t-sm" title="Jun: +8.0%"></div>
+              <div class="flex-1 bg-green-500/80 h-[50%] rounded-t-sm" title="Jul: +5.0%"></div>
+              <div class="flex-1 bg-yellow-500/80 h-[45%] rounded-t-sm" title="Ago: +4.8%"></div>
+              <div class="flex-1 bg-green-500/80 h-[80%] rounded-t-sm" title="Set: +9.1%"></div>
+              <div class="flex-1 bg-green-500/80 h-[65%] rounded-t-sm" title="Out: +7.0%"></div>
+              <div class="flex-1 bg-yellow-500/80 h-[55%] rounded-t-sm" title="Nov: +5.5%"></div>
+              <div class="flex-1 bg-rose-500/80 h-[25%] rounded-t-sm" title="Dez: -2.5%"></div>
+            </div>
+            <p class="text-center text-sm mt-2 font-semibold text-green-400">Rendimento Acumulado: +49.6%</p>
+          </div>
+
+          <div class="bg-slate-800/60 rounded-xl p-4 border border-slate-700">
+            <p class="text-sm text-slate-400 mb-2">Distribuição da Carteira</p>
+            <div class="flex h-24 items-center justify-center gap-1">
+               <div class="w-1/4 h-12 bg-blue-500 rounded-lg text-xs flex items-center justify-center font-bold" title="Renda Fixa">25%</div>
+               <div class="w-1/2 h-16 bg-red-500 rounded-lg text-xs flex items-center justify-center font-bold" title="Ações">50%</div>
+               <div class="w-1/4 h-8 bg-yellow-500 rounded-lg text-xs flex items-center justify-center font-bold" title="Fundos">25%</div>
+            </div>
+            <div class="mt-4 text-xs text-center space-y-1">
+               <div class="flex justify-center items-center gap-2">
+                  <span class="w-3 h-3 bg-blue-500 rounded-full"></span> Renda Fixa
+                  <span class="w-3 h-3 bg-red-500 rounded-full"></span> Ações
+                  <span class="w-3 h-3 bg-yellow-500 rounded-full"></span> Fundos
+               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="mt-6 bg-slate-900/80 border border-slate-800 rounded-2xl p-5">
+        <div class="flex items-center gap-2 mb-2">
+          <h2 class="text-slate-300 font-medium">Novidades e Dicas</h2>
+          <span class="text-yellow-400">⭐</span>
+        </div>
+        <div class="bg-slate-800/60 rounded-xl p-4 text-slate-300">
+          <p>💡 <strong>Dica para o seu negócio:</strong> Aproveite nossa nova linha de crédito para capital de giro com juros
+          reduzidos! Faça uma simulação rápida no “Crédito Inteligente”.</p>
+        </div>
+      </section>
+
+      <section class="mt-6 bg-slate-900/80 border border-slate-800 rounded-2xl p-3 md:p-5">
+        <div class="flex items-center justify-between mb-3">
+          <h2 class="text-slate-300 font-medium">Últimas Movimentações</h2>
+          <button id="btnAnalise" class="inline-flex items-center gap-2 bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-sm hover:bg-slate-700">⚡ Analisar com IA ✨</button>
+        </div>
+        <ul id="listaMovs" class="space-y-2"></ul>
+      </section>
+    </main>
+  </div>
+
+  <div id="resumoOverlay" class="overlay hidden">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 class="text-yellow-400 font-semibold">Resumo</h2>
+        <button id="resumoClose" class="btn-icon" aria-label="Fechar">✕</button>
+      </div>
+      <div class="modal-content">
+        <div class="row"><span>Entradas:</span><span id="rEntradas" class="value text-green-400">R$ 0,00</span></div>
+        <div class="row"><span>Saídas:</span><span id="rSaidas" class="value text-rose-400">-R$ 0,00</span></div>
+        <div class="divider"></div>
+        <div class="row"><span>Saldo mov.:</span><span id="rSaldo" class="value">R$ 0,00</span></div>
+      </div>
+      <div class="modal-actions">
+        <button id="resumoShare" class="btn-secondary">⤴ Compartilhar</button>
+        <button id="resumoOk" class="btn-primary">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/assets/js/utils.js"></script>
+  <script type="module" src="./home.js"></script>
+</body>
+</html>

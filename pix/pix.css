@@ -1,0 +1,61 @@
+.tab{ padding:.8rem 1rem; border-bottom:2px solid transparent; color:#e5e7eb; }
+.tab.active{ color:#facc15; border-color:#facc15; }
+.input{ width:100%; background:#0b1220; border:1px solid #303845; color:#e5e7eb; border-radius:.6rem; padding:.6rem .8rem; outline:none; }
+.input:focus{ border-color:#facc15; }
+.btn-primary{ background:#facc15; color:#0b1220; font-weight:600; border-radius:.6rem; padding:.6rem .8rem; }
+.btn-primary:hover{ filter:brightness(1.05); }
+.btn-secondary{ background:#374151; color:#facc15; font-weight:600; border-radius:.6rem; padding:.6rem .8rem; border:1px solid #4b5563; }
+.btn-secondary:hover{ background:#425067; }
+
+/* --- Novo Estilo do Modal Pix (para simular um pop-up) --- */
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Fundo desfocado (blur) */
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.4); /* Leve sobreposição escura */
+  display: none; /* Inicia escondido */
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 1000; /* Garante que fique acima de outros elementos */
+}
+
+.modal-backdrop.open {
+  display: flex; /* Mostra o modal */
+}
+
+.modal-content {
+  position: relative;
+  /* Estilos do comprovante */
+  width: 100%;
+  max-width: 42rem;
+  background-color: #0f172a; /* bg-slate-900/90 */
+  border: 1px solid #334155; /* border-slate-700 */
+  border-radius: 1rem; /* rounded-2xl */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-xl */
+  padding: 1.5rem; /* p-6 */
+}
+
+.btn-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.btn-close:hover {
+  opacity: 1;
+}

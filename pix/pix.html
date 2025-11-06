@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Consult Tech • Área Pix</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./pix.css" />
+</head>
+<body class="min-h-dvh text-white flex items-center justify-center p-6" style="background-color: rgba(0, 0, 0, 0.4); backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px);">
+  
+  <a href="/home/home.html" class="btn-close" style="left: auto; right: 1.5rem; top: 1.5rem;">
+    &times;
+  </a>
+
+  <main class="w-full max-w-xl bg-slate-900/90 border border-slate-700 rounded-2xl shadow-xl p-6">
+    <h1 class="text-center text-2xl font-semibold mb-4">Área Pix</h1>
+    <div class="flex items-center gap-6 border-b border-slate-700 px-2">
+      <button data-tab="enviar" class="tab active">Enviar</button>
+      <button data-tab="receber" class="tab">Receber</button>
+    </div>
+    <section id="tab-enviar" class="pt-4 space-y-3">
+      <input id="pixChave" placeholder="Chave Pix (E-mail, CPF/CNPJ, Telefone, Chave Aleatória)" class="input" />
+      <input id="pixValor" placeholder="Valor (R$)" class="input" />
+      <button id="btnContinuar" class="btn-primary w-full">Continuar</button>
+    </section>
+    <section id="tab-receber" class="pt-4 hidden">
+      <div class="border-t border-slate-700 pt-4"></div>
+      <div class="flex flex-col items-center gap-3">
+        <div class="p-2 bg-white rounded-md">
+          <svg width="200" height="200" viewBox="0 0 100 100">
+            <rect width="100" height="100" fill="#1f2937"/>
+            <rect x="10" y="10" width="28" height="28" fill="#e5e7eb"/>
+            <rect x="62" y="10" width="28" height="28" fill="#e5e7eb"/>
+            <rect x="10" y="62" width="28" height="28" fill="#e5e7eb"/>
+            <rect x="44" y="44" width="12" height="12" fill="#e5e7eb"/>
+            <rect x="56" y="56" width="10" height="10" fill="#e5e7eb"/>
+            <rect x="44" y="64" width="6" height="6" fill="#e5e7eb"/>
+          </svg>
+        </div>
+        <p class="text-center text-slate-400 text-sm">
+          Aponte a câmera para o QR Code<br>
+          <span class="text-xs">(Chave Pix: 00.000.000/0001-00)</span>
+        </p>
+        <button id="btnCopiar" class="btn-secondary w-full">⤴ Copiar Código</button>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="/assets/js/utils.js"></script>
+  <script type="module" src="/assets/js/api.js"></script>
+  <script type="module" src="./pix.js"></script>
+</body>
+</html>
